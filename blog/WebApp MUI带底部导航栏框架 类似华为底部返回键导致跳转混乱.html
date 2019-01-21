@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content=",,">
+  <meta name="keywords" content=",,,,,,">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="web开发日志WebApp开发 推荐uni-app 流畅度及api都不错 后续情况待体验">
-<meta name="keywords" content="Web前端,移动端">
+<meta name="description" content="版权声明：本文为博主原创文章，未经博主允许不得转载。 https://blog.csdn.net/qq_30756923/article/details/84316725  记录并分享  遇到的问题：mui自带的底部导航或仿写的底部导航，比如当我切换到 我的 页面时，再按华为的返回键，  页面就会出现切换混乱。  解决方式：在四个导航菜单页分别加以下代码：  1.引用自带的util.js  2.">
+<meta name="keywords" content="CSDN迁移">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Web开发日志">
-<meta property="og:url" content="http://yoursite.com/blog/index.html">
+<meta property="og:title" content="WebApp MUI带底部导航栏框架 类似华为底部返回键导致跳转混乱">
+<meta property="og:url" content="http://yoursite.com/blog/WebApp MUI带底部导航栏框架 类似华为底部返回键导致跳转混乱.html">
 <meta property="og:site_name" content="个人空间">
-<meta property="og:description" content="web开发日志WebApp开发 推荐uni-app 流畅度及api都不错 后续情况待体验">
+<meta property="og:description" content="版权声明：本文为博主原创文章，未经博主允许不得转载。 https://blog.csdn.net/qq_30756923/article/details/84316725  记录并分享  遇到的问题：mui自带的底部导航或仿写的底部导航，比如当我切换到 我的 页面时，再按华为的返回键，  页面就会出现切换混乱。  解决方式：在四个导航菜单页分别加以下代码：  1.引用自带的util.js  2.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-21T02:44:35.179Z">
+<meta property="og:updated_time" content="2019-01-21T02:41:43.135Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Web开发日志">
-<meta name="twitter:description" content="web开发日志WebApp开发 推荐uni-app 流畅度及api都不错 后续情况待体验">
+<meta name="twitter:title" content="WebApp MUI带底部导航栏框架 类似华为底部返回键导致跳转混乱">
+<meta name="twitter:description" content="版权声明：本文为博主原创文章，未经博主允许不得转载。 https://blog.csdn.net/qq_30756923/article/details/84316725  记录并分享  遇到的问题：mui自带的底部导航或仿写的底部导航，比如当我切换到 我的 页面时，再按华为的返回键，  页面就会出现切换混乱。  解决方式：在四个导航菜单页分别加以下代码：  1.引用自带的util.js  2.">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/blog/">
+  <link rel="canonical" href="http://yoursite.com/blog/WebApp MUI带底部导航栏框架 类似华为底部返回键导致跳转混乱.html">
 
 
 
 
 
-  <title>Web开发日志 | 个人空间</title>
+  <title>WebApp MUI带底部导航栏框架 类似华为底部返回键导致跳转混乱 | 个人空间</title>
   
 
 
@@ -246,7 +246,7 @@
     <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">Web开发日志</h1>
+	<h1 class="post-title" itemprop="name headline">WebApp MUI带底部导航栏框架 类似华为底部返回键导致跳转混乱</h1>
 
 
 
@@ -258,10 +258,15 @@
       <div class="post-body">
         
         
-          <h1 id="web开发日志"><a href="#web开发日志" class="headerlink" title="web开发日志"></a>web开发日志</h1><p>WebApp开发 推荐uni-app</p>
-<p>流畅度及api都不错</p>
-<p>后续情况待体验</p>
-
+          <p> 版权声明：本文为博主原创文章，未经博主允许不得转载。 <a href="https://blog.csdn.net/qq_30756923/article/details/84316725" target="_blank" rel="noopener">https://blog.csdn.net/qq_30756923/article/details/84316725</a><br>  <strong>记录并分享</strong></p>
+<p> <strong>遇到的问题：</strong>mui自带的底部导航或仿写的底部导航，比如当我切换到 我的 页面时，再按华为的返回键，</p>
+<p> 页面就会出现切换混乱。</p>
+<p> <strong>解决方式：</strong>在四个导航菜单页分别加以下代码：</p>
+<p> 1.引用自带的util.js</p>
+<p> 2.<script>加入以下代码</p>
+<p> // 类似华为左返回键处理<br> mui.back = function()<br> {<br> var subpages = util.options.subpages;<br> // 四个导航菜单页面index 对应0 1 2 3，当前第四个我的页面对应currIndex = 3<br> var currIndex = 3;<br> if(plus.webview.getWebviewById(subpages[currIndex].id) == plus.webview.currentWebview()){<br> if(confirm(‘确定退出xxxAPP?’)){<br> plus.runtime.quit();<br> }<br> else<br> {<br> return false;<br> }<br> }<br> }</p>
+<p> <img src="https://img-blog.csdnimg.cn/20181121120213141.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMwNzU2OTIz,size_16,color_FFFFFF,t_70" alt=""></p>
+</script></p>
         
       </div>
       
@@ -303,17 +308,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -357,22 +353,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#web开发日志"><span class="nav-number">1.</span> <span class="nav-text">web开发日志</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
